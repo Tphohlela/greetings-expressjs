@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="../public/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div id="page-wrap">
+        <h1>
+            Greetings
+        </h1>
+        <div class="msg">{{messages.msg}}</div>
+        {{#if messages.error}}
+        <div class="error">
+            <td> {{messages.error}}</td>
+        </div>
+        {{/if}}
+
+<div class = "flex-container">
+        <form action="/greetings" method="post">
+
+            <label for="name" class="name">Name:</label>
+            <textarea name="user" rows="1" cols="20" class="enterName"></textarea>
+
+            <p class="lang">Please select a language:</p>
+           
+                <label class="container">English
+                    <input type="radio" id="english" name="langRadioBtn" value="English" class="English radio">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Afrikaans
+                    <input type="radio" id="spanish" name="langRadioBtn" value="Afrikaans" class="Afrikaans radio">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">isiXhosa
+                    <input type="radio" id="french" name="langRadioBtn" value="isiXhosa" class="isiXhosa radio">
+                    <span class="checkmark"></span>
+                </label>
+
+            <p><button id="button1" class="button-primary greetMeBtn button" type="submit" name="button">Greet Me</button></p>
+
+        </form>
+
+        <form action="/reset" method="post">
+            <p><button id="button2" class=" button-primary reset button" type="submit" name="resetButton" value="reset">Reset</button>
+            </p>
+        </form>
+        </div>
+
+
+        <td class="greeting"><span>{{display1}}</span></td>
+
+        <p class="counter">Counter</p>
+        <p class="count1" style="padding-top: -60px;">{{{count}}}</p>
+
+        <a class="link" href="/greeted">names greeted</a>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

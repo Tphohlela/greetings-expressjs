@@ -1,0 +1,19 @@
+<div id="page-wrap">
+    
+    <div class="row">
+
+    <h1>Names that have been greeted</h1>
+<h2 class="subHeading">Click on any name to see how many times it has been greeted</h2>
+    <table>
+       {{#each displayNames}}
+        <tr>
+             <td><a class="nameLink" href="/greeted/{{this.name}}">{{this.name}}</a></td>
+        </tr>
+        {{/each}}
+
+    </table>
+</div>
+
+ </div>
+
+  <a class="link1 button" href="/">home</a>

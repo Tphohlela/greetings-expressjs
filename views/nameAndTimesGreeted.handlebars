@@ -1,0 +1,19 @@
+
+<div class="row">
+
+<h1>Showing how many times a name has been greeted</h1>
+ 
+       {{#if personsCounterFor1}}
+    <p class="numberOfTimes"> Hi, <span class="highlight">{{userName}}</span> has been greeted <span
+            class="highlight">{{personsCounter.count}}</span> time.</p>
+    {{else}}
+    <p class="numberOfTimes">Hi, <span class="highlight">{{userName}}</span> has been greeted <span
+            class="highlight">{{personsCounter.count}}</span> times.</p>
+    {{/if}}
+
+
+</div>
+
+<a class="button link2" href="/greeted">back</a>
+
+<a class="link3 button" href="/">home</a>
